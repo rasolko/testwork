@@ -1,0 +1,205 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+body{
+    font-family: 'Roboto';
+    text-align: center;
+}
+header{
+    width: 100%;
+	height: 50px;
+	background-color: #bb4949;
+}
+h1{
+    line-height: 50px;
+    font-weight: 700;
+    font-size: 22px;
+    color: white;
+}
+header > label {
+    display: none;
+}
+header > input {
+    display: none;
+}
+.switchBurger{
+    width: 30px;
+    height: 30px;
+    background-image: url(./img/list.svg);
+    background-position: center;
+    background-size: 30px;
+}
+header > nav{
+    margin: auto;
+    display: grid;
+    width: 60%;
+    grid-template-columns: repeat(6, 1fr);
+    justify-content: space-around;
+    justify-self: center;
+}
+header > nav > div > a{
+    display: block;
+    width: 100%;
+    text-decoration: none;
+    white-space: nowrap;
+}
+nav label{
+    display: none;
+    width: 30px;
+    height: 30px;
+    background-image: url(./img/down-arrow-2_icon-icons.com_70191.svg);
+    background-position: center;
+    background-size: 30px;
+}
+nav input{
+    display: none;
+}
+nav ul {
+    list-style-type: none;
+}
+header > nav > div > div > ul > li:first-child > h2 > a{
+    font-weight: 500;
+    font-size: 20px;
+    color: white;
+    text-decoration: none;
+}
+header > nav > div > div > ul > ul > li > a{
+    font-weight: 400;
+    font-size: 14px;
+    color: white;
+    text-decoration: none;
+}
+header > nav > div > div {
+    display: none;
+    width: 60%;
+    position: absolute;
+    left: 20%;
+    background-color: #c56060;
+    padding-bottom: 30px;
+    padding-top: 15px;
+}
+header > nav > div:hover > a{
+    background-color: rgba(0, 0, 0, 0.1);
+	cursor: pointer;
+}
+header > nav > div:hover > div {
+    display: grid;
+    grid-template-columns: repeat(6, auto);
+
+}
+header > nav > div > div > ul li:hover{
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+header:hover + main{
+    background-color: rgba(0, 0, 0, 0.4);
+}
+.container{
+    margin: 0 auto;
+    width: 60%;
+}
+.container > p{
+    padding-top: 10px;
+    font-weight: 300;
+}
+@media (max-width:900px){
+    header > nav{
+        display: none;
+    }
+    header > nav > div > div > ul > ul{
+        display: none;
+    }
+    .switchBurger{
+        display: block;
+        float: right;
+        margin-right: 15px;
+        margin-top: 7.5px;
+    }
+    #burgerMenu:checked + .switchBurger{
+        background-image: url(./img/1487086362-cancel_81578.svg);
+        background-position: center;
+        background-size: 30px;
+    }
+    #burgerMenu:checked + .switchBurger + .nav{
+        display: grid;
+        overflow-y: scroll;
+        grid-template-columns: 1fr;
+        position: absolute;
+        max-height: 100%;
+        width: 100%;
+        background-color: #bb4949;
+        margin-top: 35px;
+    }
+    header > nav > div > a > h1{
+        display: grid;
+        justify-content: start;
+        padding-left: 15px;
+    }
+    .container{
+        width: 90%;
+    }
+    header > nav > div:hover > div{
+        display: none;
+        grid-template-columns: 1fr;
+    }
+    nav label{
+        display: grid;
+        justify-self: end;
+        align-self: center;
+        margin-right: 15px;
+        margin-left: 15px;
+    }
+    header > nav > div{
+        display: grid;
+        grid-template-columns: 1fr auto;
+    }
+    #arrow2:checked + .switchArrow2{
+        background-image: url(./img/down-arrow-2_icon-icons.com_70191\ —\ копия.png);
+        background-position: center;
+        background-size: 30px;
+    }
+    #arrow2:checked + .switchArrow2 + div{
+        display: block;
+        width: auto;
+        position: static;
+        padding: 0;
+    }
+    ul{
+        margin-left: 15px;
+        display: grid;
+        grid-template-columns: 1fr auto;
+        justify-items: start;
+    }
+    #arrow2_2:checked + .switchArrow2_2{
+        background-image: url(./img/down-arrow-2_icon-icons.com_70191\ —\ копия.png);
+        background-position: center;
+        background-size: 30px;
+    }
+    #arrow2_2:checked + .switchArrow2_2 + ul{
+        display: block;
+        width: auto;
+    }
+    #arrow2_4:checked + .switchArrow2_4{
+        background-image: url(./img/down-arrow-2_icon-icons.com_70191\ —\ копия.png);
+        background-position: center;
+        background-size: 30px;
+    }
+    #arrow2_4:checked + .switchArrow2_4 + ul{
+        display: block;
+        width: auto;
+    }
+    #arrow4:checked + .switchArrow4{
+        background-image: url(./img/down-arrow-2_icon-icons.com_70191\ —\ копия.png);
+        background-position: center;
+        background-size: 30px;
+    }
+    #arrow4:checked + .switchArrow4 + div{
+        display: block;
+        width: auto;
+        position: static;
+        padding: 0;
+    }
+}
